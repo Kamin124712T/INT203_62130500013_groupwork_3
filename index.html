@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Vue Js - HelloWorld App</title>
+
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <!-- Using via Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
+    <!-- https://tailwindcss.com/docs/installation -->
+    <!-- Using Tailwind via CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  
+    <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    
+    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
+  </head>
+
+  <body>
+    <div id="app">
+        <div class="w-auto mx-56 flex flex-col justify-center mt-16">
+            <h1 class="ml-72 text-5xl font-bold">Photo Gallery ({{countGallerys}})</h1>
+            <div v-for="(gallery, index) in gallerys" class="flex flex-row items-center mt-10">
+                <img class="w-96 mr-10" :src="gallery.img" @click="favoriteImg(index)">
+                <span class="text-5xl font-medium">{{gallery.address}}</span>
+                <i v-show="gallery.favorite" class="material-icons text-4xl mt-3 ml-10 text-red-500">favorite</i>
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
