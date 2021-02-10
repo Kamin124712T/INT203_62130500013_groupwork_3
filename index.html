@@ -24,7 +24,7 @@
   <body>
     <div id="app">
         <div class="w-auto mx-56 flex flex-col justify-center mt-16">
-            <h1 class="ml-72 text-5xl font-bold">Photo Gallery ({{countGallerys}})</h1>
+            <h1 class="ml-72 text-5xl font-bold">Photo Gallery ({{countGallerys}})<span class="text-2xl"> favorite {{countfavorite}}</span></h1>
             <div v-for="(gallery, index) in gallerys" class="flex flex-row items-center mt-10">
                 <img class="w-96 mr-10" :src="gallery.img" @click="favoriteImg(index)">
                 <span class="text-5xl font-medium">{{gallery.address}}</span>

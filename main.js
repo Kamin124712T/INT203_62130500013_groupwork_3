@@ -14,6 +14,9 @@ const app = {
     computed:{
         countGallerys(){
             return this.gallerys.length
+        },
+        countfavorite(){
+            return this.gallerys.filter(g => g.favorite).length
         }
     },
 }
